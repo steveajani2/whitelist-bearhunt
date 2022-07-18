@@ -16,7 +16,7 @@ const acc_creator = await stdlib.newTestAccount(startingBalance);
 const acc_player1 = await stdlib.newTestAccount(startingBalance);
 const acc_player2 = await stdlib.newTestAccount(startingBalance);
 const theNFT = await stdlib.launchToken(acc_creator, "chel", "CHE", { supply: 1 });
-
+console.log(`The Nft info : ${theNFT}`)
 const ctc_creator = acc_creator.contract(backend);
 
 const ctc_player1 = acc_player1.contract(backend, ctc_creator.getInfo())
